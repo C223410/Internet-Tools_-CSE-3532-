@@ -1,17 +1,36 @@
-let iN = document.getElementById("logIn");
-let secondPage = document.getElementById('second-page');
-let btnSubmit = document.getElementById("btn-submit");
+let deposit = document.getElementById("deposit-button")
+let withdraw = document.getElementById("withdraw-button")
+let tDepositAmount = 0;
+let tWithdraw = 0;
+let totalAmount = 1200;
 
-btnSubmit.addEventListener("click", function () {
-    let uMail = document.getElementById("user-email").value;
-    let uPass = document.getElementById("user-password").value;
-    console.log(uMail)
-    console.log(uPass)
-    if (uMail === "c223410" && uPass === "12345") {
-        iN.setAttribute("class", "hidden");
-        window.location.href = "bank.html";
+
+deposit.addEventListener("click", function () {
+    let dep = document.getElementById("deposit-input").value;
+    let depositedAmount = document.getElementById("deposited-amount")
+    let totalBalance = document.getElementById("total-balance")
+
+    tDepositAmount+=Number(dep);
+    totalAmount+=Number(dep);
+
+    depositedAmount.innerHTML =`${tDepositAmount}`
+    totalBalance.innerHTML = `${totalAmount}`
+    return;    
+});
+
+withdraw.addEventListener("click", function () {
+    let dep = document.getElementById("withdraw-input").value;
+    let withdrawAmount = document.getElementById("withdraw-amount")
+    let totalBalance = document.getElementById("total-balance")
+
+    if(totalAmount < Number(dep)){
+        alert("You Dont Have enough mooonyyyyyyyyy!!!!")
+        return;
     }
-    else {
-        alert("Wrong Password");
-    }
+    tWithdraw += Number(dep);
+    totalAmount -= Number(dep);
+
+    withdrawAmount.innerHTML =`${tWithdraw}`
+    totalBalance.innerHTML = `${totalAmount}`
+    return;    
 });
