@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="text-5xl text-center mt-6">Welcome to your
+            <span class="font-semibold text-violet-600">Baap Er Bank</span>!!!
+        </h1>
+    </header>
+
+
+    <main class="second-page hidden max-w-7xl m-auto mt-9">
+
+        <div class="money-dashboard">
+
+            <div class="flex flex-col sm:flex-row">
+
+                <!-- Deposit Section  -->
+                <div class="bg-indigo-500 text-white rounded-lg flex-1 mx-5 my-2 p-16 sm:p-20">
+                    <p class="text-2xl uppercase pb-3">Deposit</p>
+                    <h2 class="text-4xl font-bold">
+                        $<span id="deposit-amount">000</span>
+                    </h2>
+                </div>
+
+                <!-- Withdraw Section  -->
+                <div class="bg-green-500 text-white rounded-lg flex-1 mx-5 my-2 p-16 sm:p-20">
+                    <p class="text-2xl uppercase pb-3">Withdraw</p>
+                    <h2 class="text-4xl font-bold">
+                        $<span id="withdraw-amount">000</span>
+                    </h2>
+                </div>
+
+                <!-- Total Amount Section  -->
+                <div class="bg-yellow-500 text-white rounded-lg flex-1 mx-5 my-2 p-16 sm:p-20">
+                    <p class="text-2xl uppercase pb-3">Total Amount</p>
+                    <h2 class="text-4xl font-bold">
+                        $<span id="total-balance">1200</span>
+                    </h2>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Money Input Dashboard -->
+        <div class="money-input py-5">
+
+            <div class="flex flex-col sm:flex-row">
+                <!-- Deposit Money Input -->
+                <div class="bg-yellow-200 rounded-lg flex-1 mx-5 my-2 p-10 sm:p-20">
+
+                    <h2 class="text-2xl pb-5 font-bold text-center">
+                        Deposit Amount
+                    </h2>
+
+                    <input type="text" placeholder=" $ Input Deposit Money"
+                        class="border border-gray-200 p-4 rounded-lg block mb-5 w-full focus:outline-none"
+                        id="deposit-input" />
+
+                    <button class="bg-blue-500 px-5 py-3 text-white w-full" type="submit" id="deposit-button"> Deposit
+                    </button>
+
+                </div>
+
+                <!-- Withdraw Money Input -->
+                <div class="bg-green-200 rounded-lg flex-1 mx-5 my-2 p-10 sm:p-20">
+
+                    <h2 class="text-2xl pb-5 font-bold text-center"> Withdraw Amount </h2>
+
+                    <input type="text" placeholder=" $ Input Withdraw Money"
+                        class="border border-gray-200 p-4 rounded-lg block mb-5 w-full focus:outline-none"
+                        id="withdraw-input" />
+
+                    <button class="bg-blue-500 px-5 py-3 text-white w-full" type="submit" id="withdraw-button"> Withdraw
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="cal.js"></script>
+</body>
+
+</html>
