@@ -10,8 +10,13 @@ deposit.addEventListener("click", function () {
     let depositedAmount = document.getElementById("deposited-amount")
     let totalBalance = document.getElementById("total-balance")
 
-    tDepositAmount+=Number(dep);
-    totalAmount+=Number(dep);
+    if(isNaN(dep)){
+        alert("Enter valid Number!!!!!!!!!!!!!")
+        return;
+    }
+
+    tDepositAmount += Number(dep);
+    totalAmount += Number(dep);
 
     depositedAmount.innerHTML =`${tDepositAmount}`
     totalBalance.innerHTML = `${totalAmount}`
@@ -23,10 +28,16 @@ withdraw.addEventListener("click", function () {
     let withdrawAmount = document.getElementById("withdraw-amount")
     let totalBalance = document.getElementById("total-balance")
 
+    if(isNaN(dep)){
+        alert("Enter valid Number!!!!!!!!!!!!!")
+        return;
+    }
+    
     if(totalAmount < Number(dep)){
         alert("You Dont Have enough mooonyyyyyyyyy!!!!")
         return;
     }
+
     tWithdraw += Number(dep);
     totalAmount -= Number(dep);
 
