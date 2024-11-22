@@ -1,4 +1,4 @@
-// var n = 4;
+/*// var n = 4;
 var n = parseInt(readline())
 
 var a = readline().split(" ")
@@ -11,4 +11,10 @@ for(var i=a.length-1;i>=0; i--)
 
 b = b.trim()
 // console.log(b);
-print(b)
+print(b)*/
+
+let numbers = [1,2,3];
+
+const evenNumbers = numbers.filter((num) => num % 2 === 0);
+
+console.log(evenNumbers);
